@@ -164,8 +164,8 @@ def form():
     else:
         server=smtplib.SMTP("smtp.gmail.com",587)
         server.starttls()
-        server.login("wozniakneel@gmail.com",f'{os.getenv("PASSWORD")}')
-        server.sendmail("wozniakneel@gmail.com","wozniakneel@gmail.com",text)
+        server.login("someone@gmail.com",f'{os.getenv("PASSWORD")}')
+        server.sendmail("someone@gmail.com","someone@gmail.com",text)
         info_text="Message sent!"
         return render_template("contactus.html",info_text=info_text)
 
