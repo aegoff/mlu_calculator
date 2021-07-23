@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+<title>{% block title%}MLU Calculator: Transcript{% endblock %}</title>
+</head>
+{% block content%}
+		  <br><br><br><br><br><br>
+          <br>
+          <div class="mui--text-display3">MLU Calculator: Transcript</div>
+          <br>
+          <br>
+		<div class="content-wrapper"><p style="font-size:20px">Please enter your language transcript (if not already done for you).<br> Please edit the transcript and press "Submit Query."<br><br><b>***Be sure to enter a period (not "?" or "!") in between utterances, or it won't be accurate.***</b>
+        </p>
+        <p style="font-size:18px">Right: "Hi. I am Skyler. Who are you."<br>Wrong: "Hi! I am Skyler! Who are you?"</p></div>
+        <br>
+        <p>{{message2}}</p>
+          <br>
+          <form action = "/transcript" method = "POST" 
+         enctype = "multipart/form-data">
+          <textarea name='transcript' rows="5" cols="60">{{transcript}}</textarea>
+          <div>
+          <input type = "submit" style="background-color: purple; color:white;height:50px;width:200px;"/><br><br>
+           </div></form>           
+		
+{% endblock %}
+

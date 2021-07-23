@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+<title>{% block title%}MLU Calculator: Uploader{% endblock %}</title>
+</head>
+{% block content%}
+   <body>
+      <center>
+         <br><br><br><br><br><br>
+         <br>
+      <h1>MLU Calculator: Uploader for wav files (Optional)</h1>   <br>
+      <div class="content-wrapper"><p style="font-size:20px"> Upload a recording (wav only--at the moment!). It's optional. We don't save anything, but currently, we only accept one-channel wav files.<br> Click the "Next" button if you don't want to upload.          
+          </p></div>
+          <p>{{message}}
+      <form action = "/uploader" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" /> <br><br><br>
+         <input type = "submit" style="background-color: purple; color:white;height:50px;width:200px;"/><br><br>
+      </form>
+
+      <button onclick="location.href='/transcript'" style="background-color: purple; color:white;height:50px;width:200px;" type="button">Next! (No upload) </button>
+      </center>
+   </body>
+   {% endblock %}

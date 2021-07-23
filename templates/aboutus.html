@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+<title>{% block title%}About Us{% endblock %}</title>
+</head>
+
+{% block content%}
+	<br><br><br><br><br><br>
+          <br>
+          <div class="mui--text-display3">MLU Calculator: About Us</div>
+          <br>
+          <br>
+  <br>
+<center>
+<h2>How did we do this?</h2>
+<p style="font-size: 18px;">We utilized the Vosk API to convert speech to text, for those who choose to upload an audio file.<br>
+Then, we used the Morfessor module, from NTLK, to count the number of morphemes in transcript. <br>Flask served as microframework for this web application, and MUI CSS served as the front-end. <br>No database service is being utilized for this service. All files (if any) are deleted within 5 minutes.</p>
+<br><br>
+<h2>Future Steps</h2>
+<p style="font-size: 18px;">We plan to use ffmpeg to allow users to submit a wider variety of audio files.</p>
+<br><br>
+<h2>Have any suggestions?</h2>
+<p style="font-size: 18px;"> Feel free to submit them in the "Contact Us" Page!</p>
+</center>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+<title>{% block title%}MLU Calculator: Results{% endblock %}</title>
+</head>
+{% block content%}
+		  <br><br><br><br><br><br>
+          <br>
+          <div class="mui--text-display3">MLU Calculator: Results</div>
+          <br>
+          <br>
+		<div class="content-wrapper"><p style="font-size:20px">Success! See your results below!<br>Don't forget to save it somewhere!</p></div>
+          <br>
+          <textarea rows="5" cols="60">{{results}}</textarea>
+          <div>
+            <br>
+            <br>
+          <button onclick="location.href='/home'" type="button" style="background-color: purple; color:white;height:50px;width:200px;">Let's do this again!</button></div>
+            
+		
+{% endblock %}
+

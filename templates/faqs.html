@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+<head>
+<title>{% block title%}FAQs{% endblock %}</title>
+
+<style>
+
+input {
+    display: none;
+}
+
+label {
+    display: block;    
+    padding: 8px 22px;
+    margin: 0 0 1px 0;
+    cursor: pointer;
+    background: #6AAB95;
+    border-radius: 3px;
+    color: #FFF;
+    transition: ease .5s;
+}
+
+label:hover {
+    background: #4E8774;
+}
+
+.content {
+    background: #E2E5F6;
+    padding: 10px 25px;
+    border: 1px solid #A7A7A7;
+    margin: 0 0 1px 0;
+    border-radius: 3px;
+}
+
+input + label + .content {
+    display: none;
+}
+
+input:checked + label + .content {
+    display: block;
+}
+
+</style>
+</head>
+{% block content%}
+	<br><br><br><br><br><br>
+          <br>
+          <div class="mui--text-display3">MLU Calculator: FAQs</div>
+          <br>
+          <br>
+  <br>
+<center>
+
+<details style="font-size: 20px;"><summary style="cursor:pointer;outline: none;font-size: 30px"><strong>Are you storing any data?</strong></summary>
+No. We don't collect any data; it's all anonymous.<br>Any files stored are deleted within 5 minutes.
+</details>
+<br>
+<details style="font-size: 20px;"><summary style="cursor:pointer;outline: none;font-size: 30px"><strong>How does this whole thing work exactly?</strong></summary>
+If you upload an audio file, we use offline speech-to-text recognition software that converts your audio into text. <br>Then, we use morpheme analysis to return an MLU to you.
+</details>
+<br>
+<details style="font-size: 20px;"><summary style="cursor:pointer;outline: none;font-size: 30px"><strong>How does it distinguish between utterances?</strong></summary>
+Please use a period followed by a space to separate utterances. <br>
+                  i.e. "thank you. Thank you. thank"<br>
+Notice how grammar and capitalization don't matter to the algorithm.
+</details>
+<br>
+
+<details style="font-size: 20px;"><summary style="cursor:pointer;outline: none; font-size: 30px;"><strong>How can I make the MLU be as accurate as possible?</strong></summary>According to ASHA's standards, there should be at least 100 utterances when collecting MLUs. <br>
+See the chart below for age norms [Source: Miller (1981)]<br><br>
+<image src="{{url_for('static',filename='mlu_norms.png')}}"></image>
+</details>
+</center>
+
+{% endblock %}

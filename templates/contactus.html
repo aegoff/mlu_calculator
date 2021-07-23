@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+<title>{% block title%}Contact Us!{% endblock %}</title>
+</head>
+
+{% block content%}
+	<br>
+    <br><br><br><br><br>
+          <br>
+          <div class="mui--text-display3">MLU Calculator: Contact Us!</div>
+          <br>
+          <br>
+          {{info_text}}
+    <form action="/form" method="POST" id="my-form">
+          <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label" style="font-size: 20px;">Email:</label><br>
+          <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div><br>
+    </form>
+          <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label" style="font-size: 20px; text-align: left;">Message:</label><br>
+
+          <textarea form="my-form" name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div><br>
+          <button form="my-form" type="submit" class="btn btn-primary" style="background-color: purple; color:white;height:50px;width:200px;">Submit</button>
+{% endblock %}
+

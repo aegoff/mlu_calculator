@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+<title>{% block title%}MLU Calculator{% endblock %}</title>
+</head>
+{% block content%}
+		  <br><br><br><br><br><br>
+          <br>
+          <div class="mui--text-display3">MLU Calculator</div>
+          <h1><i>A Mean Length of Utterance Calculator</i></h1>
+          <h2>*No data is saved. All files are deleted, and everything is completely anonymous*</h2>
+          <br>
+          <br>
+		<div class="content-wrapper"><p style="font-size:20px"> Upload a recording (wav only--at the moment!) OR type in a transcript, and your results will be ready in less than 2 minutes!<br> Click the "Next" button to see!
+          
+          </p></div>
+          <br>
+          <div>
+          <button onclick="location.href='/upload'" type="button" style="background-color: purple; color:white;height:50px;width:200px;">Next!</button></div>
+            
+		
+{% endblock %}
+
